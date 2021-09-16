@@ -27,4 +27,5 @@ cd start/client && npm i && npm start
 ## Description
 
 Data about rocket launches is retrieved from [the spaceX API](https://api.spacexdata.com/v2/).
+
 The application is storing some data about users information and booked launches in a sqlite database.
