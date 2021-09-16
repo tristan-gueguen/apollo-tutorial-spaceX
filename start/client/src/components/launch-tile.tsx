@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import styled, { css } from 'react-emotion';
 import { Link } from '@reach/router';
 
@@ -13,12 +13,14 @@ export function getBackgroundImage(id: string) {
 }
 
 export default ({ launch }: any) => {
-  const { id, mission, rocket } = launch;
+  const { id, mission, rocket, isBooked } = launch;
+  const opacity = isBooked ? 0.5 : 1.0
   return (
     <StyledLink
       to={`/launch/${id}`}
       style={{
         backgroundImage: getBackgroundImage(id),
+        opacity: opacity
       }}
     >
       <h3>{mission.name}</h3>
